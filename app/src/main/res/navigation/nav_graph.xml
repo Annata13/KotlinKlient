@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.proba.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <!--<action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />-->
+        <action
+            android:id="@+id/action_loginFragment_to_ProductFragment"
+            app:destination="@id/ProductFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_TackCreate"
+            app:destination="@id/TackCreate" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProductFragment"
+        android:name="com.example.proba.ProductsFragment"
+        tools:layout="@layout/fragment_products">
+
+        <!--<action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/TackCreate"
+        android:name="com.example.proba.TaskCreate"
+        tools:layout="@layout/create_task">
+        </fragment>
+
+</navigation>
